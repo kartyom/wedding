@@ -10,6 +10,10 @@
   },
   "packageManager": "yarn@1.22.19",
   "scripts": {
-    "tw": "tailwindcss -i ./style.css -o ./tailwind.css"
+    "tw": "tailwindcss -i ./style.css -o ./tailwind.css",
+    "dev": "nodemon -e js,html -x 'yarn tw'"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.1"
   }
 }
