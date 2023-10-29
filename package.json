@@ -8,6 +8,7 @@
   "devDependencies": {
     "tailwindcss": "^3.3.5"
   },
+  "packageManager": "yarn@1.22.19",
   "scripts": {
     "tw": "tailwindcss -i ./style.css -o ./tailwind.css"
   }
