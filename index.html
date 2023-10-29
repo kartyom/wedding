@@ -7,9 +7,113 @@
     <title>Wedding</title>
   </head>
   <body>
-    <h1 class="bg-red-400">Hello</h1>
-    <p class="text-green-300">lajkwhdioawd</p>
-    <p class="text-[25px] text-blue-400">awfawfwafawf</p>
-    <p class="text-green-400">uuuuuu</p>
+    <div class="w-full flex flex-col items-center gap-10 pb-5">
+      <div class="w-full h-full pt-4 flex flex-col items-center justify-center">
+        <div class="overflow-hidden h-[50px] flex items-center justify-center">
+          <img
+            src="/icons/images.svg"
+            alt="jkawbduiay"
+            class="text-green-300"
+          />
+        </div>
+
+        <span class="font-serif text-[20px] text-[#458789]"
+          >Wedding Invitation</span
+        >
+        <div class="relative">
+          <img
+            src="/images/first.jpg"
+            alt="wedding photo"
+            class="h-[400px] object-cover"
+          />
+          <span
+            class="absolute bottom-5 right-2 font-serif text-[#d4e4e4] animate-pulse text-[25px]"
+            >Արսեն & Սյուզան</span
+          >
+        </div>
+        <p
+          class="px-[30px] text-[18px] w-full text-center py-[20px] text-[#205658]"
+        >
+          Սիրով հրավիրում ենք ձեզ մասնակցելու մեր կյանքում շատ կարևոր
+          իրադարձությանը` մեր հարսանիքին։
+        </p>
+
+        <p
+          class="px-[30px] text-[30px] font-serif w-full text-center py-[20px] text-[#205658]"
+        >
+          20.11.2023թ
+        </p>
+
+        <p
+          class="px-[30px] text-[18px] w-full text-center py-[20px] text-[#205658]"
+        >
+          Հարսանիքին մնացել է
+        </p>
+
+        <div class="flex justify-around w-full items-start">
+          <div class="flex flex-col items-center justify-center">
+            <span id="days" class="text-[30px] text-[#205658]"></span>
+            <span class="text-[#205658] text-[12px]">ՕՐ</span>
+          </div>
+          <span class="text-[25px] font-[700] text-[#205658]">:</span>
+          <div class="flex flex-col items-center justify-center">
+            <span id="hours" class="text-[30px] text-[#205658]"></span>
+            <span class="text-[#205658] text-[12px]">ԺԱՄ</span>
+          </div>
+          <span class="text-[25px] font-[700] text-[#205658]">:</span>
+
+          <div class="flex flex-col items-center justify-center">
+            <span id="minutes" class="text-[30px] text-[#205658]"></span>
+            <span class="text-[#205658] text-[12px]">ՐՈՊԵ</span>
+          </div>
+          <span class="text-[25px] font-[700] text-[#205658]">:</span>
+
+          <div class="flex flex-col items-center justify-center">
+            <span id="seconds" class="text-[30px] text-[#205658]"></span>
+            <span class="text-[#205658] text-[12px]">ՎԱՅՐԿՅԱՆ</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img src="/images/second.jpg" alt="Syuzi Arsen" />
+      </div>
+    </div>
+    <script>
+      function updateCountdown() {
+        const now = new Date();
+        const countDownDate = new Date("November 20, 2023 00:00:00").getTime();
+
+        const distance = countDownDate - now;
+
+        if (distance < 0) {
+          document.getElementById("countdown").textContent =
+            "Countdown is over!";
+        } else {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").textContent =
+            days > 10 ? days : "0" + days;
+          document.getElementById("hours").textContent =
+            hours > 10 ? hours : "0" + hours;
+          document.getElementById("minutes").textContent =
+            minutes > 10 ? minutes : "0" + minutes;
+
+          document.getElementById("seconds").textContent =
+            seconds > 10 ? seconds : "0" + seconds;
+        }
+      }
+
+      updateCountdown();
+
+      setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>
