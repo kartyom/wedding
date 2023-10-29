@@ -1,0 +1,14 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kartyom/wedding.git",
+  "author": "Artyom <artyom.karapetyan@zoomerang.app>",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  },
+  "scripts": {
+    "tw": "tailwindcss -i ./style.css -o ./tailwind.css"
+  }
+}
